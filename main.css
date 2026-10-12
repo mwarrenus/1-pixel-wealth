@@ -216,17 +216,17 @@ h1 {
 }
 .infobox {
   z-index: 1;
-  margin-left: 6000px;
-  width: 12000px;
+  margin-left: 11700px;
+  width: 23400px;
 }
 .four-hundred .infobox {
-  width: 4000px;
+  width: 7800px;
 }
 .flex {
   display: flex;
 }
 .infobox.first {
-  margin-left: 30000px;
+  margin-left: 58500px;
 }
 .infobox.first .title {
   max-width: 390px;
@@ -236,13 +236,13 @@ h1 {
   max-width: 280px;
 }
 .infobox-half {
-  margin-left: 4000px;
+  margin-left: 7800px;
 }
 .infobox-quarter {
-  margin-left: 2000px;
+  margin-left: 3900px;
 }
 .infobox-close {
-  margin-left: 500px;
+  margin-left: 975px;
 }
 .sub-infobox {
   margin: 0 40px;
@@ -268,15 +268,32 @@ h1 {
   width: 480px;
 }
 .median .wealth{
-  width: 7.94px;
-  height: 7.94px;
+  width: 9.35px;
+  height: 9.35px;
+}
+.median-net-worth {
+  width: 480px;
+}
+.median-net-worth .wealth {
+  width: 14.69px;
+  height: 14.69px;
+  background-color: #673AB7;
+}
+.update-note {
+  max-width: 640px;
+  margin: 24px auto;
+  padding: 0 16px;
+  font-size: 14px;
+  line-height: 1.55;
+  color: #333;
+  text-align: left;
 }
 .million {
   width: 200px;
 }
 .million .wealth {
-  width: 33.62px;
-  height: 33.62px;
+  width: 31.62px;
+  height: 31.62px;
   background-color: #4CAF50;
 }
 .billion .wealth {
@@ -285,13 +302,13 @@ h1 {
   background-color: #03A9F4;
 }
 .bezos .wealth {
-  width: 278000px;
+  width: 756000px;
   height: 500px;
   background-color: orange;
 }
 .four-hundred .wealth {
   margin-left: 100px;
-  width: 5920000px;
+  width: 16000000px;
   height: 500px;
   background-color: #03A9F4;
 }
@@ -331,23 +348,23 @@ h1 {
   padding: 5px;
 }
 .lifetime .square {
-  width: 41.23px;
-  height: 41.23px;
+  width: 52.83px;
+  height: 52.83px;
   background-color: blue;
 }
 .healthcare .square {
-  width: 4.96px;
-  height: 4.96px;
+  width: 5.2px;
+  height: 5.2px;
   background-color: blue;
 }
 .amazon-year .square {
-  width: 5.4px;
-  height: 5.4px;
+  width: 7.07px;
+  height: 7.07px;
   background-color: blue;
 }
 .year-veteran .square {
   height: 400px;
-  width: 1186px;
+  width: 1219px;
   margin-top: 5px;
   background-color: #8BC34A;
 }
@@ -365,7 +382,7 @@ h1 {
 }
 .year-chemo .square {
   height: 400px;
-  width: 22500px;
+  width: 247500px;
   background-color: #03A9F4;
   border: 5px dashed #0078af;
   box-sizing: border-box;
@@ -388,32 +405,32 @@ h1 {
 }
 .beyonce .square {
   height: 350px;
-  width: 1142px;
+  width: 2857.14px;
   background-color: #406994;
 }
 .goldman .square {
-  width: 223px;
-  height: 223px;
+  width: 447.21px;
+  height: 447.21px;
   background-color: #64A8F0;
 }
 .tim-cook .square {
-  width: 1785px;
+  width: 8571.43px;
   height: 350px;
   background-color: #71889e;
 }
 .doctor .square {
-  width: 81.8px;
-  height: 81.8px;
+  width: 105.06px;
+  height: 105.06px;
   background-color: #0661b9;
 }
 .lawyer .square {
-  width: 63.2px;
-  height: 63.2px;
+  width: 79.92px;
+  height: 79.92px;
   background-color: #00478a;
 }
 .hedgefund .square {
-  width: 289.8px;
-  height: 289.8px;
+  width: 309.84px;
+  height: 309.84px;
   background-color: #9daebf;
 }
 .line-chart .chart-outer {
@@ -497,7 +514,7 @@ h1 {
 }
 .sixty-percent-people .people {
   width: 800px;
-  height: 197400px;
+  height: 164500px;
 }
 .sixty-percent-people .people-wrapper {
   box-shadow: inset 0 0 10px #000000;
@@ -557,7 +574,7 @@ h1 {
   }
   .sixty-percent-people .people {
     width: 200px;
-    height: 394800000px;
+    height: 329000000px;
   }
   .people-label {
     left: 35px;
@@ -630,6 +647,24 @@ h1 {
 }
 .three-percent .piechart-inner {
   stroke-dasharray: 3 100;
+}
+.one-point-three .piechart-inner {
+  stroke-dasharray: 1.3 100;
+}
+.one-point-three .piechart-outer {
+  transform: rotate(-38deg);
+}
+.two-point-one .piechart-inner {
+  stroke-dasharray: 2.1 100;
+}
+.two-point-one .piechart-outer {
+  transform: rotate(-43deg);
+}
+.two-point-five .piechart-inner {
+  stroke-dasharray: 2.5 100;
+}
+.seventeen-percent .piechart-inner {
+  stroke-dasharray: 17 100;
 }
 .five-percent .piechart-inner {
   stroke-dasharray: 5 100;
@@ -705,7 +740,7 @@ h1 {
   width: 90vw;
 }
 .malaria .babies {
-  height: 9120320px;
+  height: 14640000px;
   background-size: 160px;
   background-image: url(img/baby.svg);
 }
@@ -729,7 +764,7 @@ h1 {
   }
   .malaria .babies {
     background-size: 68px;
-    height: 3876340px;
+    height: 6222000px;
   }
   .scroll-indicator {
     top: 38%;
@@ -763,7 +798,7 @@ h1 {
 }
 .malaria-bar .square {
   height: 400px;
-  width: 337px;
+  width: 508.3px;
   background-color: #66c35a;
   display: flex;
   box-sizing: border-box;

@@ -36,7 +36,7 @@ function generate_sixty_percent() {
 generate_sixty_percent();
 
 sixtyPercent.addEventListener('scroll', function(){
-  let newScroll = ((sixtyPercent.scrollTop / sixtyPercent.scrollHeight) * 60).toFixed(1);
+  let newScroll = ((sixtyPercent.scrollTop / sixtyPercent.scrollHeight) * 50).toFixed(1);
   if (sixtyPercentScrollPercentage !== newScroll) {
     sixtyPercentScrollPercentage = newScroll;
     sixtyPercentIndicator.innerHTML = newScroll + '%';
@@ -53,7 +53,7 @@ function update_wealth_counter() {
   if (bezos_viewable()) {
     if (bezos_counter_viewable()) {
       let wealth = (window.scrollX - bezos.offsetLeft + 175) * 500000;
-      bezos_counter.innerHTML = (wealth < 139000000000) ? money.format(wealth) : "$139,000,000,000.00";
+      bezos_counter.innerHTML = (wealth < 378000000000) ? money.format(wealth) : "$378,000,000,000.00";
     }
     else {
       bezos_counter.innerHTML = '';
@@ -62,7 +62,7 @@ function update_wealth_counter() {
   else if (four_hundred_viewable()) {
     if (four_hundred_counter_viewable()) {
       let wealth = (window.scrollX - four_hundred.offsetLeft + 175) * 500000;
-      four_hundred_counter.innerHTML = (wealth < 2960000000000) ? money.format(wealth) : "$2,960,000,000,000.00";
+      four_hundred_counter.innerHTML = (wealth < 8000000000000) ? money.format(wealth) : "$8,000,000,000,000.00";
     }
     else {
       bezos_counter.innerHTML = '';
