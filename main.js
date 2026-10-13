@@ -122,8 +122,11 @@ function toggleZoom() {
     return bezos.offsetLeft + bezos.offsetWidth + 400;
   }
   function progress() {
+    // Whichever is further along: the current row, or the page as a whole.
+    var overall = maxScrollX() > 0 ? window.scrollX / maxScrollX() : 0;
     var w = rowWidth() - window.innerWidth;
-    return w > 0 ? window.scrollX / w : 0;
+    var row = w > 0 ? window.scrollX / w : 0;
+    return Math.max(overall, row);
   }
   function updateVisibility() {
     btn.hidden = !playing && progress() < 0.75;
