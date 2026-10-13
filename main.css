@@ -147,7 +147,7 @@ h1 {
 }
 .wealth > .wealth-title {
   flex-basis: 1%;
-  padding: 10px;
+  padding: 6px 10px;
 }
 @media (max-width: 450px) {
   .wealth-title {
@@ -414,8 +414,8 @@ h1 {
   background-color: #406994;
 }
 .goldman .square {
-  width: 571.43px;
-  height: 350px;
+  width: 625px;
+  height: 320px;
   background-color: #64A8F0;
 }
 .tim-cook .square {

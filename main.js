@@ -128,8 +128,10 @@ function toggleZoom() {
     var row = w > 0 ? window.scrollX / w : 0;
     return Math.max(overall, row);
   }
+  var unlocked = false; // once reached, the button stays available for the session
   function updateVisibility() {
-    btn.hidden = !playing && progress() < 0.75;
+    if (progress() >= 0.75) unlocked = true;
+    btn.hidden = !playing && !unlocked;
   }
   function stop() {
     playing = false;
