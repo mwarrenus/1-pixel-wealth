@@ -1,3 +1,16 @@
+// Machine-readable copy of every wealth value used on this page lives in
+// wealth.json (same directory). After the page loads it is also available in
+// the browser console as window.WEALTH_DATA, e.g.:
+//   WEALTH_DATA.people.jeff_bezos.net_worth  // 378000000000
+window.WEALTH_DATA = null;
+fetch('wealth.json')
+  .then(function (r) { return r.json(); })
+  .then(function (data) {
+    window.WEALTH_DATA = data;
+    document.dispatchEvent(new CustomEvent('wealthdata', { detail: data }));
+  })
+  .catch(function () { /* page works fine without it (e.g. file://) */ });
+
 var bezos = document.getElementById('bezos');
 var bezos_counter = document.getElementById('bezos-counter');
 var bezosCounterStart = document.getElementById('bezos-counter-start');
