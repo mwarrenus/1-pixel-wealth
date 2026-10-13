@@ -19,7 +19,7 @@
         <rect x="376.6979" y="18.436267" width="84.42013" height="370.1979" fill="blue"/>
       </g>
       <g id="Graphic_9">
-        <rect x="247.2537" y="286.6" width="84.42013" height="101.6" fill="#68bc36"/>
+        <rect x="247.2537" y="286.8" width="84.42013" height="101.8" fill="#68bc36"/>
       </g>
       <g id="Graphic_10">
         <text transform="translate(251.25334 404.10696)" fill="black">
@@ -33,13 +33,13 @@
         </text>
       </g>
       <g id="Graphic_12">
-        <text transform="translate(259.0275 114.5722)" fill="black">
-          <tspan font-family="Helvetica Neue" font-size="15.008022" font-weight="400" fill="black" x="7354117e-19" y="14">$2 trillion</tspan>
+        <text transform="translate(259.0275 262.8)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="15.008022" font-weight="400" fill="black" x="7354117e-19" y="14">$2.2 trillion</tspan>
         </text>
       </g>
       <g id="Graphic_13">
         <text transform="translate(378.0411 -5.491978)" fill="black">
-          <tspan font-family="Helvetica Neue" font-size="15.008022" font-weight="400" fill="black" x="0" y="14">$2.96 trillion</tspan>
+          <tspan font-family="Helvetica Neue" font-size="15.008022" font-weight="400" fill="black" x="0" y="14">$8 trillion</tspan>
         </text>
       </g>
     </g>
