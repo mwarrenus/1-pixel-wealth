@@ -853,7 +853,7 @@ h1 {
   width: 370px;
 }
 
-.autoscroll-btn {
+#autoscroll-btn {
   position: fixed;
   right: 20px;
   bottom: 20px;
@@ -869,6 +869,6 @@ h1 {
   box-shadow: 4px 4px 10px rgba(0, 0, 0, .4);
   cursor: pointer;
 }
-.autoscroll-btn:hover {
+#autoscroll-btn:hover {
   background-color: #000;
 }
