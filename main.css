@@ -135,6 +135,10 @@ h1 {
 }
 .four-hundred .wealth > .wealth-title {
   flex-basis: 420px;
+  background-color: #03A9F4;
+}
+.bezos .wealth > .wealth-title {
+  background-color: orange;
 }
 .four-hundred .intro {
   margin-left: 0;
@@ -154,6 +158,7 @@ h1 {
   align-self: flex-start;
   position: sticky;
   left: 0;
+  z-index: 2;
   margin-bottom: 5px;
   color: black;
   margin-top: 0;
@@ -363,8 +368,8 @@ h1 {
   background-color: blue;
 }
 .year-veteran .square {
-  height: 400px;
-  width: 1219px;
+  height: 370px;
+  width: 1317.36px;
   margin-top: 5px;
   background-color: #8BC34A;
 }
@@ -409,8 +414,8 @@ h1 {
   background-color: #406994;
 }
 .goldman .square {
-  width: 447.21px;
-  height: 447.21px;
+  width: 571.43px;
+  height: 350px;
   background-color: #64A8F0;
 }
 .tim-cook .square {
@@ -506,14 +511,15 @@ h1 {
 .people-wrapper {
   width: 800px;
   height: 400px;
-  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 .four-hundred-people .people {
-  width: 800px;
+  width: 100%;
   height: 400px;
 }
 .sixty-percent-people .people {
-  width: 800px;
+  width: 100%;
   height: 164500px;
 }
 .sixty-percent-people .people-wrapper {
@@ -569,11 +575,11 @@ h1 {
     height: 400px;
   }
   .four-hundred-people .people {
-      width: 200px;
+      width: 100%;
       height: 400px;
   }
   .sixty-percent-people .people {
-    width: 200px;
+    width: 100%;
     height: 329000000px;
   }
   .people-label {
@@ -748,7 +754,8 @@ h1 {
   box-shadow: inset 0 0 10px #00000042;
   width: 800px;
   height: 320px;
-  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 .baby-counter {
   top: 127px;
