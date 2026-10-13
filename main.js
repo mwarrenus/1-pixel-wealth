@@ -97,3 +97,69 @@ function update_wealth_counter() {
 function toggleZoom() {
   document.getElementById('line-chart').classList.toggle('zoom');
 }
+
+// ---- Auto-scroll (play/pause) ----
+// The button appears once the reader is about 3/4 of the way through the
+// horizontal scroll of the row they are reading (the Bezos row or the much
+// longer Forbes 400 row). Playback ramps up to cruising speed, and any
+// manual scroll input (wheel/trackball, touch, keys, mouse drag) pauses it.
+(function () {
+  var btn = document.getElementById('autoscroll-btn');
+  if (!btn) return;
+  var raf = null, lastTs = null, speed = 0, playing = false;
+  var MAX_SPEED = 9000; // px per second
+  var RAMP = 1500;      // px per second gained per second
+
+  function maxScrollX() {
+    return document.documentElement.scrollWidth - window.innerWidth;
+  }
+  function rowWidth() {
+    var center = window.innerHeight / 2;
+    var r = four_hundred.getBoundingClientRect();
+    if (r.top <= center && r.bottom >= center) {
+      return document.documentElement.scrollWidth;
+    }
+    return bezos.offsetLeft + bezos.offsetWidth + 400;
+  }
+  function progress() {
+    var w = rowWidth() - window.innerWidth;
+    return w > 0 ? window.scrollX / w : 0;
+  }
+  function updateVisibility() {
+    btn.hidden = !playing && progress() < 0.75;
+  }
+  function stop() {
+    playing = false;
+    if (raf) cancelAnimationFrame(raf);
+    raf = null; lastTs = null; speed = 0;
+    btn.innerHTML = '&#9654; Auto-scroll';
+    updateVisibility();
+  }
+  function step(ts) {
+    if (!playing) return;
+    if (lastTs === null) lastTs = ts;
+    var dt = Math.min((ts - lastTs) / 1000, 0.05);
+    lastTs = ts;
+    speed = Math.min(MAX_SPEED, speed + RAMP * dt);
+    window.scrollBy(speed * dt, 0);
+    if (window.scrollX >= maxScrollX() - 1) { stop(); return; }
+    raf = requestAnimationFrame(step);
+  }
+  function start() {
+    playing = true;
+    btn.hidden = false;
+    btn.innerHTML = '&#10073;&#10073; Pause';
+    raf = requestAnimationFrame(step);
+  }
+  btn.addEventListener('click', function () { playing ? stop() : start(); });
+  window.addEventListener('scroll', updateVisibility, { passive: true });
+  window.addEventListener('resize', updateVisibility);
+  window.addEventListener('wheel', function () { if (playing) stop(); }, { passive: true });
+  window.addEventListener('touchmove', function () { if (playing) stop(); }, { passive: true });
+  window.addEventListener('mousedown', function (e) { if (playing && e.target !== btn) stop(); });
+  window.addEventListener('keydown', function (e) {
+    if (playing && e.target !== btn &&
+        ['ArrowRight', 'ArrowLeft', 'PageDown', 'PageUp', ' ', 'Home', 'End'].indexOf(e.key) >= 0) stop();
+  });
+  updateVisibility();
+})();

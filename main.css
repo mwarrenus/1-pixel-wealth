@@ -852,3 +852,23 @@ h1 {
 .all-of-them .title {
   width: 370px;
 }
+
+.autoscroll-btn {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1000;
+  font-family: sans-serif;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 999px;
+  background-color: #333;
+  color: #fff;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, .4);
+  cursor: pointer;
+}
+.autoscroll-btn:hover {
+  background-color: #000;
+}
